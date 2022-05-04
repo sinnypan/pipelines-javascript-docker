@@ -3,7 +3,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- master
+ - none
 
 resources:
 - repo: self
@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'Docker JFrog'
-  imageRepository: 'default-docker-virtual'
+  imageRepository: 'default-docker-virtual/javascropt-docker-image'
   containerRegistry: 'https://sinnyjfrogtest.jfrog.io'
   dockerfilePath: '$(Build.SourcesDirectory)/app/Dockerfile'
   tag: '$(Build.BuildId)'
